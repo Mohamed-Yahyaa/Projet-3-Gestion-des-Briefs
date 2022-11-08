@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('start_Date')->nullable();
             $table->timestamp('end_Date')->nullable();
             $table->string('descreption')->nullable();
-            $table->string('Briefs_id')->nullable();
+            $table->foreignId('Briefs_id')->References('id')->on('briefs')->onDelete('cascade');
            
         });
     }
