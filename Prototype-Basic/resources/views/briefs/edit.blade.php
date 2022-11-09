@@ -29,9 +29,10 @@
       <tr>
 
         <th scope="col">Id</th>
-        <th scope="col">Nom de Brief</th>
-        <th scope="col">Date de Livraison</th>
-        <th scope="col">Date de Récupération</th>
+        <th scope="col">Nom de Tache</th>
+        <th scope="col">Date de début</th>
+        <th scope="col">Date de fin</th>
+        <th scope="col">Descreption</th>
         <th scope="col">Action</th>
       </tr>
     </thead>

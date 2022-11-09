@@ -37,8 +37,7 @@ class TachesController extends Controller
         "Briefs_id" => $request->briefs_id,
         ]);
         $taches->save();
-        return redirect('briefs/');
-       
+        return redirect('briefs/'.$request->briefs_id. '/edit');
     }
 
 
@@ -51,7 +50,7 @@ class TachesController extends Controller
     public function edit($id)
     {
         //
-        $taches = Taches::where('id','$id')->get();
+        $taches = Taches::find($id);
         
         return view('taches.edit',compact('taches'));
     }
@@ -67,7 +66,7 @@ class TachesController extends Controller
             "descreption" => $request->descreption,
           
         ]);
-        return redirect('briefs/'.$request->Briefs_id. '/edit');
+        return redirect('briefs/'.$request->briefs_id. '/edit');
     }
 
     
