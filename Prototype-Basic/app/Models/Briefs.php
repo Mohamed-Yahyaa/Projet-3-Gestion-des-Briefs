@@ -12,7 +12,7 @@ class Briefs extends Model
     use HasFactory;
 
     public $timestamps = FALSE;
-    protected $fileable=[
+    protected $fillable=[
         "Brief_name",
         "dateDelivery",
         "dateRecovery"

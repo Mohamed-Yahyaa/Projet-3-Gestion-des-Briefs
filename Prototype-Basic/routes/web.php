@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BriefsController;
+use App\Http\Controllers\TachesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/briefs', BriefsController::class);
+
+Route::resource('/taches', TachesController::class);
 
