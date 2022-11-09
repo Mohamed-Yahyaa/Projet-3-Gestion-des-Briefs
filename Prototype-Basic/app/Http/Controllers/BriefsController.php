@@ -11,9 +11,9 @@ class BriefsController extends Controller
     public function index()
     {
         //
-        $table = Briefs::all();
+        $briefs = Briefs::all();
 
-        return view ('briefs.index',compact('briefs'));
+        return view ('Briefs.index',compact('briefs'));
 
     }
 
@@ -21,14 +21,14 @@ class BriefsController extends Controller
     public function create()
     {
         //
-        return view ('briefs.create');
+        return view ('Briefs.create');
     }
 
   
     public function store(Request $request)
     {
         //
-        $Briefs = briefs::create([
+        $Briefs = Briefs::create([
             'Brief_name' => $request->name,
             'dateDelivery' => $request->Delivery,
              'dateRecovery' => $request->Recovery
