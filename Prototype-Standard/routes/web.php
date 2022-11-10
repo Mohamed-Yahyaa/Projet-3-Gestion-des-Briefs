@@ -25,3 +25,7 @@ Route::resource('/briefs', BriefsController::class);
 
 Route::resource('/taches', TachesController::class);
 
+Route::resource('/apprenants', ApprenantController::class);
+
+Route::resource('/assigner', AssingerController::class);
+

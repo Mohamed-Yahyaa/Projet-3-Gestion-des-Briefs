@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Appranants_Briefs;
+use App\Models\Apprenants_Briefs;
 use App\Models\Briefs;
 use App\Models\Apprenants;
 use Illuminate\Http\Request;
@@ -27,9 +27,9 @@ class AssingerController extends Controller
     public function store(Request $request)
     {
         //
-        $apprenants_brief::create([
-            'apprenant_id' => $request->apprenant_id,
-              'brief_id' => $request->brief_id
+        Apprenants_Briefs::create([
+            'apprenants_id' => $request->apprenants_id,
+              'briefs_id' => $request->briefs_id
 
         ]);
         return back();
@@ -40,8 +40,8 @@ class AssingerController extends Controller
     public function show($id)
     {
         //
-        apprenants ::all();
-        $apprenantsAssinger = Brief::find($id)->apprenants;
+        $apprenants = Apprenants::all();
+        $apprenantsAssinger = Briefs::find($id)->apprenants;
         return view('briefs.assigner',compact('apprenants','apprenantsAssinger','id'));
     }
 
@@ -59,12 +59,12 @@ class AssingerController extends Controller
     }
 
    
-    public function destroy($id)
+    public function destroy(Request $request ,$id )
     {
         //
-        apprenants_brief::where([
-            ['apprenant_id',$request->apprenant_id],
-            ['brief_id',$request->brief_id]
+        apprenants_briefs::where([
+            ['apprenants_id',$request->apprenants_id],
+            ['briefs_id',$request->briefs_id]
             ])->delete();
             return back();
     }

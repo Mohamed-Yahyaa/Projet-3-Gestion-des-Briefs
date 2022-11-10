@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Briefs;
+use App\Models\Appranants_Briefs;
+use App\Models\Apprenants;
 use App\Models\Taches;
 use Illuminate\Http\Request;
 

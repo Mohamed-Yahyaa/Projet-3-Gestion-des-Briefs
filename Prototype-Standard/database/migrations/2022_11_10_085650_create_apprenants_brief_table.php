@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('apprenants_brief', function (Blueprint $table) {
+        Schema::create('apprenants_briefs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('apprenant_id')
+            $table->foreignId('apprenants_id')
             ->references('id')
             ->on('apprenants')
             ->onDelete('cascade');
-            $table->foreignId('brief_id')
+            $table->foreignId('briefs_id')
             ->references('id')
             ->on('briefs')
             ->onDelete('cascade');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('apprenants_brief');
+        Schema::dropIfExists('apprenants_briefs');
     }
 };
