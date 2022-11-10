@@ -26,6 +26,11 @@
     </form>
 </td>
 <td>
+  <form action="{{route('assigner.show',$value->id)}}">
+     <button type="submit" class="btn btn-info">Assigner</button>
+ </form>
+</td>
+<td>
     <form action="{{route('briefs.destroy',$value->id)}}" method="POST">
         @method("DELETE")
         @csrf

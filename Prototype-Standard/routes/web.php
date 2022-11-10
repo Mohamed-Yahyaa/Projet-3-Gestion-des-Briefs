@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BriefsController;
 use App\Http\Controllers\TachesController;
+use App\Http\Controllers\ApprenantController;
+use App\Http\Controllers\AssingerController;
 
 /*
 |--------------------------------------------------------------------------

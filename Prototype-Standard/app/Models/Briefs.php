@@ -21,6 +21,8 @@ class Briefs extends Model
     public function Taches(){
         return $this->hasMany(taches::class);
     }
-    
+    public function Apprenants(){
+        return $this->belongsToMany(apprenants::class);
+    }
 
 }

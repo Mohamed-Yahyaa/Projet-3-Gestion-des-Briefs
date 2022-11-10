@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('apprenants_brief', function (Blueprint $table) {
             $table->id();
-            // $table->unsignedInteger("apprenant_id");
-            // $table->unsignedInteger("brief_id");
             $table->foreignId('apprenant_id')
             ->references('id')
             ->on('apprenants')

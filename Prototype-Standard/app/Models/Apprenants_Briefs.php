@@ -5,20 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Apprenants extends Model
+class Apprenants_Briefs extends Model
 {
     use HasFactory;
-    
-    protected $table = 'apprenants';
+
+    protected $table = 'apprenants_brief';
     public $timestamps = FALSE;
     protected $fillable=[
-        "Nom",
-        "Prenom",
-        "Email"
+        "apprenant_id",
+        "brief_id",
+        
     ];
 
-    public function Briefs(){
-        return $this->belongsToMany(Briefs::class);
-    }
     
 }
