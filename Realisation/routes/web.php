@@ -5,6 +5,7 @@ use App\Http\Controllers\BriefsController;
 use App\Http\Controllers\TachesController;
 use App\Http\Controllers\ApprenantController;
 use App\Http\Controllers\AssingerController;
+use App\Http\Controllers\PromotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,4 @@ Route::resource('/apprenants', ApprenantController::class);
 
 Route::resource('/assigner', AssingerController::class);
 
+Route::resource('/promotion', PromotionController::class);
